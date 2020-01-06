@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CRM CoAventure</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="img/favicon.ico">
+  </head>
+
+  <body>    
+
+<!----------------------------- HEADER ---------------------------->
+    <header>
+        <img src="./img/logo-coaventure-horizontal-transparent.png">
+    </header>
+
+<!----------------------- NAV BARRE LATERALE ---------------------->
+    <container>
+      <nav>
+
+    <!-- ********************* 1 - GESTION SUIVI ********************* -->
+
+        <ul>
+          <li class="title-nav">Gestion de suivi</li>
+          <li>
+            <img src="./img/icone-ca.png">
+            Chiffre d'affaires
+          </li>
+
+          <li>
+            <a href="#">
+              <img src="./img/icone-aventure-blanc.png">
+              Aventures
+              <img class="flecheBas" src="./img/fleche-bas-blanc.png">
+            </a>
+            <ul>
+              <li><a href="#">Liste des aventures</a></li>
+              <li><a href="#">Ajouter</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <img src="./img/icone-coaventurier.png">
+            CoAventuriers
+            <img class="flecheBas" src="./img/fleche-bas-blanc.png">
+          </li>
+
+          <li>
+            <img src="./img/icone-professionnel.png">
+            Professionnels
+            <img class="flecheBas" src="./img/fleche-bas-blanc.png">
+          </li>
+        </ul>
+
+    <!-- ********************* 2- FIDELISATION ********************* -->
+
+        <ul>
+          <li class="title-nav">Fidélisation</li>
+          <li>
+            <img src="./img/icone-badge.png">
+            Badges
+          </li>
+          <li>
+            <img src="./img/icone-ajouter.png">
+            Ajouter un badge
+          </li>
+        </ul>
+      </nav>
+
+<!--------------------------- CONTENU -------------------------->
+      <section>
+
+  <!-- ********************* 1 - FOCUS CHIFFRES ********************* -->
+       
+
+        <div id="focusChiffres">
+          <div id="carreChiffres1">
+            <img id="imageChiffres" src="./img/fond-kpi.png">
+            <p class="texteChiffres">2541</p>
+          </div>
+          <div id="carreChiffres2">
+            <img src="./img/fond-kpi-orange.png">
+            <p class="texteChiffres">58</p>
+          </div>
+          <div id="carreChiffres3">
+            <img src="./img/fond-kpi-vert.png">
+            <p class="texteChiffres">183</p>
+          </div>
+          <div id="carreChiffres4">
+            <img src="./img/fond-kpi-rose.png">
+            <p class="texteChiffres">39</p>
+          </div>
+        </div>
+
+  <!-- ********************* 2 - PROCHAINES AVENTURES ********************* -->      
+        <div id=tableAventures>
+          <div id="nextAventures">
+            <h2>Les prochaines aventures à compléter</h2>
+            <div >
+              <p>blablabla</p>
+            </div>
+          </div>
+
+
+  <!-- ********************* 3 - TOP RESERVATIONS ********************* --> 
+
+          <div id="topAventures">
+            <h2>Top des aventures</h2>
+            <div >
+              <p>blablabla</p>
+            </div>
+          </div>
+
+        </div>    
+      </section>
+    </container>
+
+
+<!--------------------------- SCRIPTS JS -------------------------->
+
+<script src="./js/ca.js"></script>
+<script src="./js/coaventurier.js"></script>
+
+
+  </body>
+
+</html>
