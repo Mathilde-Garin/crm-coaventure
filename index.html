@@ -17,43 +17,56 @@
         <img src="./img/logo-coaventure-horizontal-transparent.png">
     </header>
 
-<!----------------------- NAV BARRE LATERALE ---------------------->
+<!----------------------- MENU BARRE LATERALE ---------------------->
     <container>
       <nav>
 
     <!-- ********************* 1 - GESTION SUIVI ********************* -->
 
-        <ul>
+        <ul class="myNav">
           <li class="title-nav">Gestion de suivi</li>
           <li>
             <img src="./img/icone-ca.png">
             Chiffre d'affaires
           </li>
-
-          <li>
-            <a href="#">
+          
+          <li class="myNav-item ui-accordion-item">
+            <a class="myNav-link ui-accordion-trigger" href="#">
               <img src="./img/icone-aventure-blanc.png">
-              Aventures
+              Aventures &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
               <img class="flecheBas" src="./img/fleche-bas-blanc.png">
             </a>
-            <ul>
-              <li><a href="#">Liste des aventures</a></li>
-              <li><a href="#">Ajouter</a></li>
+            <ul class="myNav-content ui-accordion-content">
+              <li><a href="#"><img src="./img/icone-liste.png">Liste des aventures</a></li>
+              <li><a href="#"><img src="./img/icone-ajouter.png">Ajouter</a></li>
             </ul>
           </li>
 
-          <li>
-            <img src="./img/icone-coaventurier.png">
-            CoAventuriers
-            <img class="flecheBas" src="./img/fleche-bas-blanc.png">
+          <li class="myNav-item ui-accordion-item">
+            <a class="myNav-link ui-accordion-trigger" href="#">
+              <img src="./img/icone-coaventurier.png">
+              CoAventuriers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <img class="flecheBas" src="./img/fleche-bas-blanc.png">
+            </a>
+            <ul class="myNav-content ui-accordion-content">
+              <li><a href="#"><img src="./img/icone-liste.png">Liste des CoAventuriers</a></li>
+              <li><a href="#"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+            </ul>
           </li>
 
-          <li>
-            <img src="./img/icone-professionnel.png">
-            Professionnels
-            <img class="flecheBas" src="./img/fleche-bas-blanc.png">
+          <li class="myNav-item ui-accordion-item">
+            <a class="myNav-link ui-accordion-trigger" href="#">
+              <img src="./img/icone-professionnel.png">
+              Professionnels &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <img class="flecheBas" src="./img/fleche-bas-blanc.png">
+            </a>
+            <ul class="myNav-content ui-accordion-content">
+              <li><a href="#"><img src="./img/icone-liste.png">Liste des professionnels</a></li>
+              <li><a href="#"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+            </ul>
           </li>
         </ul>
+
 
     <!-- ********************* 2- FIDELISATION ********************* -->
 
@@ -68,7 +81,15 @@
             Ajouter un badge
           </li>
         </ul>
+
+    <!-- ********************* 3- ANALYTICS ********************* -->
+
+    <ul>
+      <li class="title-nav">Analytics</li>
+    </ul>
+        
       </nav>
+
 
 <!--------------------------- CONTENU -------------------------->
       <section>
@@ -94,6 +115,7 @@
           </div>
         </div>
 
+
   <!-- ********************* 2 - PROCHAINES AVENTURES ********************* -->      
         <div id=tableAventures>
           <div id="nextAventures">
@@ -103,10 +125,76 @@
               <h2>Les prochaines aventures à compléter</h2>
             </div>
 
+            <!-- TABLEAU PROCHAINES AVENTURES -->
             <div>
-              <p>blablabla</p>
+              <table id="tableNextAventures">
+
+                <thead>
+                  <td>Aventure</td>
+                  <td>Date</td>
+                  <td>Lieu</td>
+                  <td>Prix</td>
+                  <td>Nb places restantes</td>
+                  <td></td>
+                </thead>
+
+                <tr>
+                  <td>Aventure 1</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="buttonConsulter"><img src="./img/bouton-consulter-bleu.png"></td>
+                </tr>
+
+                <tr>
+                  <td>Aventure 2</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="buttonConsulter"><img src="./img/bouton-consulter-bleu.png"></td>
+                </tr>
+
+                <tr>
+                  <td>Aventure 3</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="buttonConsulter"><img src="./img/bouton-consulter-bleu.png"></td>
+                </tr>
+
+                <tr>
+                  <td>Aventure 4</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="buttonConsulter"><img src="./img/bouton-consulter-bleu.png"></td>
+                </tr>
+
+                <tr>
+                  <td>Aventure 5</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="buttonConsulter"><img src="./img/bouton-consulter-bleu.png"></td>
+                </tr>
+
+                <tr>
+                  <td>Aventure 6</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="buttonConsulter"><img src="./img/bouton-consulter-bleu.png"></td>
+                </tr>
+
+
+              </table>
             </div>
-            
           </div>
 
 
@@ -114,8 +202,41 @@
 
           <div id="topAventures">
             <h2>Top des aventures</h2>
-            <div >
-              <p>blablabla</p>
+            
+            <div>
+              <table id="tableNextAventures">
+
+                <tr>
+                  <td>Aventure 1</td>
+                  <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                </tr>
+
+                <tr>
+                  <td>Aventure 2</td>
+                  <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                </tr>
+
+                <tr>
+                  <td>Aventure 3</td>
+                  <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                </tr>
+
+                <tr>
+                  <td>Aventure 4</td>
+                  <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                </tr>
+
+                <tr>
+                  <td>Aventure 5</td>
+                  <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                </tr>
+
+                <tr>
+                  <td>Aventure 6</td>
+                  <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                </tr>
+
+              </table>
             </div>
           </div>
 
@@ -128,6 +249,13 @@
 
 <script src="./js/ca.js"></script>
 <script src="./js/coaventurier.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="./js/jquery.simpleAccordion.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.myNav').simpleAccordion();
+	});
+</script>
 
 
   </body>
