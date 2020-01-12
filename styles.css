@@ -46,8 +46,22 @@ header {
 header img {
     height: 10vh;
     width: auto;
+    margin-left: 2vw;
 }
 
+#connexion {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#imgDeconnexion {
+    width: 15px;
+    height: 15px;
+    margin-right: 3vw;
+    margin-left: 1vw;
+}
 
 /* /////////////////////////////// MENU BARRE LATERALE /////////////////////////////// */
 
@@ -83,11 +97,6 @@ li img {
     vertical-align: middle;
 }
 
-.flecheBas {
-    width: 10px;
-    height: auto;
-}
-
 
 /* ------- MENU ACCORDEON ------- */
 
@@ -104,6 +113,11 @@ li img {
 
 .active > .ui-accordion-content { 
     display:block; 
+}
+
+.flecheBas {
+    width: 10px;
+    height: auto;
 }
 
 

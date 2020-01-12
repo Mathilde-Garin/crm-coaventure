@@ -36,43 +36,40 @@ async function recupererData() {
 
  // Fonction pour afficher les données dans le tableau Top Aventures
 
-    function afficherTopAventures() {
 
-        var tableTruc =[name="", textid=""];
+ var tableTruc = [textid="", name=""];
+
+    function afficherTopAventures() {
 
         // Récupérer index & texte de l'id pour faire un tri
         for (let i=0 ; i < tableauAventure.length ; i++) {
             if (tableauAventure[i].promoter !== undefined) {
-                 tableTruc.push([tableauAventure[i].name, tableauAventure[i].promoter.id]);
+                 tableTruc.push([tableauAventure[i].promoter.id, tableauAventure[i].name]);
             }
         }
 
-        // Trier tableTruc du plus grand au plus petit selon son textid
+console.log(tableTruc);
+console.log(tableTruc[2][1]);
 
 
-        function compare (a,b) {
+        Trier tableTruc du plus grand au plus petit selon son textid
 
-                const topA = a.texteid();
-                const topB = b.texteid();
-        
-                let comparison = 0;
-                if (topA > topB) {
-                    comparison = 1;
-                } else if (topA < topB) {
-                     comparison = -1;
-                } else {
-                    comparison = 1;
-                }
-                return comparison;
+        function triTableau () {
+            
+            tableTruc.splice(0,2);  // Supprimer les 2 1ers éléments du tableau qui sont vides
+            console.log(tableTruc);
 
+            tableTruc.sort();    // FONCTIONNE MAIS ORDRE ALPHABETIQUE OR ON SOUHAITE PLUS PETIT AU PLUS GRAND
+            
+            console.log(tableTruc);
         }
         
-            console.log(tableTruc.sort(compare));
+        triTableau();
 
+        
+        // AFFICHER DANS LE TABLEAU HTML LES NOMS DES TOPS AVENTURES
 
                // document.querySelectorAll(".topAventure")[i].innerHTML = tableauAventure[i].promoter.id;
-
-    console.log(tableTruc);
 
     }
     afficherTopAventures();
