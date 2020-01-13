@@ -12,6 +12,22 @@
 
   <body>    
 
+    <!-- <iframe frameborder="0" width="1500" height="150" src="menu.html"></iframe> -->
+    
+    <!-- <nav>	
+      <ul>		
+        <li><a target="_parent" href="home.html">HOME</a></li>		
+        <li><a target="_parent" href="Bio.html">BIO</a></li>		
+        <li><a target="_parent" href="Photos.html">PHOTOS</a></li>		
+        <li><a target="_parent" href="Records.html">MUSIC</a></li>		
+        <li><a target="_parent" href="videos.html">VIDEOS</a></li>		
+        <li><a target="_parent" href="News.html">NEWS</a></li>		
+        <li><a target="_parent" href="Tour.html">TOUR</a></li>		
+        <li><a target="_parent" href="Contact.html">CONTACT</a></li>
+      </ul>
+    </nav> -->
+
+
 <!----------------------------- HEADER ---------------------------->
     <header>
         <img src="./img/logo-coaventure-horizontal-transparent.png">
@@ -25,13 +41,13 @@
     <container>
       <nav>
 
-    <!-- ********************* 1 - GESTION SUIVI ********************* -->
+    <!-- ********************* MENU 1 - GESTION SUIVI ********************* -->
 
         <ul class="myNav">
+          <li class="title-nav1"><a href="index.html">Tableau de bord</a></li>
           <li class="title-nav">Gestion de suivi</li>
-          <li>
-            <img src="./img/icone-ca.png">
-            Chiffre d'affaires
+          <li class="navActive">
+            <a href="#"><img src="./img/icone-ca.png">Chiffre d'affaires</a>
           </li>
           
           <li class="myNav-item ui-accordion-item">
@@ -41,55 +57,53 @@
               <img class="flecheBas" src="./img/fleche-bas-blanc.png">
             </a>
             <ul class="myNav-content ui-accordion-content">
-              <li><a href="#"><img src="./img/icone-liste.png">Liste des aventures</a></li>
-              <li><a href="#"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+              <li class="navActive"><a href="listeav.html"><img src="./img/icone-liste.png">Liste des aventures</a></li>
+              <li class="navActive"><a href="ajoutav.html"><img src="./img/icone-ajouter.png">Ajouter</a></li>
             </ul>
           </li>
 
           <li class="myNav-item ui-accordion-item">
             <a class="myNav-link ui-accordion-trigger" href="#">
               <img src="./img/icone-coaventurier.png">
-              CoAventuriers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              CoAventuriers
               <img class="flecheBas" src="./img/fleche-bas-blanc.png">
             </a>
             <ul class="myNav-content ui-accordion-content">
-              <li><a href="#"><img src="./img/icone-liste.png">Liste des CoAventuriers</a></li>
-              <li><a href="#"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+              <li><a href="#" class="navActive"><img src="./img/icone-liste.png">Liste des CoAventuriers</a></li>
+              <li><a href="#" class="navActive"><img src="./img/icone-ajouter.png">Ajouter</a></li>
             </ul>
           </li>
 
           <li class="myNav-item ui-accordion-item">
             <a class="myNav-link ui-accordion-trigger" href="#">
               <img src="./img/icone-professionnel.png">
-              Professionnels &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              Professionnels 
               <img class="flecheBas" src="./img/fleche-bas-blanc.png">
             </a>
             <ul class="myNav-content ui-accordion-content">
-              <li><a href="#"><img src="./img/icone-liste.png">Liste des professionnels</a></li>
-              <li><a href="#"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+              <li><a href="#" class="navActive"><img src="./img/icone-liste.png">Liste des professionnels</a></li>
+              <li><a href="#" class="navActive"><img src="./img/icone-ajouter.png">Ajouter</a></li>
             </ul>
           </li>
         </ul>
 
 
-    <!-- ********************* 2- FIDELISATION ********************* -->
+    <!-- ********************* MENU 2- FIDELISATION ********************* -->
 
         <ul>
           <li class="title-nav">Fidélisation</li>
-          <li>
-            <img src="./img/icone-badge.png">
-            Badges
+          <li class="navActive">
+            <a href="#"><img src="./img/icone-badge.png">Badges</a>
           </li>
-          <li>
-            <img src="./img/icone-ajouter.png">
-            Ajouter un badge
+          <li class="navActive">
+            <a href="#"><img src="./img/icone-ajouter.png">Ajouter un badge</a>
           </li>
         </ul>
 
-    <!-- ********************* 3- ANALYTICS ********************* -->
+    <!-- ********************* MENU 3- ANALYTICS ********************* -->
 
     <ul>
-      <li class="title-nav">Analytics</li>
+      <li class="title-nav1"> <a href="#">Analytics</a></li>
     </ul>
         
       </nav>
@@ -103,19 +117,21 @@
         <div id="focusChiffres">
           <div id="carreChiffres1">
             <img id="imageChiffres" src="./img/fond-kpi.png">
-            <p class="texteChiffres">2541</p>
+            <p class="texteChiffres" id="texteChiffresCA">2541</p>
           </div>
           <div id="carreChiffres2">
-            <img src="./img/fond-kpi-orange.png">
-            <p class="texteChiffres">58</p>
+            <a href="listeav.html">
+              <img src="./img/fond-kpi-orange.png">
+              <p class="texteChiffres" id="texteChiffresAv">58</p>
+            </a>
           </div>
           <div id="carreChiffres3">
             <img src="./img/fond-kpi-vert.png">
-            <p class="texteChiffres">183</p>
+            <p class="texteChiffres" id="texteChiffresCoAv">183</p>
           </div>
           <div id="carreChiffres4">
             <img src="./img/fond-kpi-rose.png">
-            <p class="texteChiffres">39</p>
+            <p class="texteChiffres" id="texteChiffresPro">39</p>
           </div>
         </div>
 

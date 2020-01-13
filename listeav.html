@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CRM CoAventure - Liste aventures</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="img/favicon.ico">
+  </head>
+
+  <body>    
+
+<!----------------------------- HEADER ---------------------------->
+    <header>
+        <img src="./img/logo-coaventure-horizontal-transparent.png">
+        <div id="connexion">
+          <p>Admin</p>
+          <img id="imgDeconnexion" src="./img/logout.png">
+        </div>
+    </header>
+
+<!----------------------- MENU BARRE LATERALE ---------------------->
+<container>
+  <nav>
+
+<!-- ********************* MENU 1 - GESTION SUIVI ********************* -->
+
+    <ul class="myNav">
+      <li class="title-nav1"><a href="index.html">Tableau de bord</a></li>
+      <li class="title-nav">Gestion de suivi</li>
+      <li class="navActive">
+        <a href="#"><img src="./img/icone-ca.png">Chiffre d'affaires</a>
+      </li>
+      
+      <li class="myNav-item ui-accordion-item">
+        <a class="myNav-link ui-accordion-trigger" href="#">
+          <img src="./img/icone-aventure-blanc.png">
+          Aventures
+          <img class="flecheBas" src="./img/fleche-bas-blanc.png">
+        </a>
+        <ul class="myNav-content ui-accordion-content">
+          <li class="navActive"><a href="listeav.html"><img src="./img/icone-liste.png">Liste des aventures</a></li>
+          <li class="navActive"><a href="ajoutav.html"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+        </ul>
+      </li>
+
+      <li class="myNav-item ui-accordion-item">
+        <a class="myNav-link ui-accordion-trigger" href="#">
+          <img src="./img/icone-coaventurier.png">
+          CoAventuriers
+          <img class="flecheBas" src="./img/fleche-bas-blanc.png">
+        </a>
+        <ul class="myNav-content ui-accordion-content">
+          <li><a href="#" class="navActive"><img src="./img/icone-liste.png">Liste des CoAventuriers</a></li>
+          <li><a href="#" class="navActive"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+        </ul>
+      </li>
+
+      <li class="myNav-item ui-accordion-item">
+        <a class="myNav-link ui-accordion-trigger" href="#">
+          <img src="./img/icone-professionnel.png">
+          Professionnels 
+          <img class="flecheBas" src="./img/fleche-bas-blanc.png">
+        </a>
+        <ul class="myNav-content ui-accordion-content">
+          <li><a href="#" class="navActive"><img src="./img/icone-liste.png">Liste des professionnels</a></li>
+          <li><a href="#" class="navActive"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+<!-- ********************* MENU 2- FIDELISATION ********************* -->
+
+    <ul>
+      <li class="title-nav">Fidélisation</li>
+      <li class="navActive">
+        <a href="#"><img src="./img/icone-badge.png">Badges</a>
+      </li>
+      <li class="navActive">
+        <a href="#"><img src="./img/icone-ajouter.png">Ajouter un badge</a>
+      </li>
+    </ul>
+
+<!-- ********************* MENU 3- ANALYTICS ********************* -->
+
+<ul>
+  <li class="title-nav1"> <a href="#">Analytics</a></li>
+</ul>
+    
+  </nav>
+
+
+
+<!--------------------------- CONTENU - COLONNE CENTRE -------------------------->
+      <section>
+        <div id="contenuListeAv">
+          <div id=tableAventures>
+            <div id="listeAventures">
+
+              <div id="titleNextAventures">
+                <h2>Liste des aventures</h2>
+              </div>
+
+              <!-- TABLEAU LISTE DES AVENTURES -->
+              <div>
+                <table id="tableNextAventures">
+
+                  <thead>
+                    <td>Aventure</td>
+                    <td>Date</td>
+                    <td>Lieu</td>
+                    <td>Prix</td>
+                    <td>Nb places restantes</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </thead>
+
+                  <tr>
+                    <td class="nom"></td>
+                    <td class="date"></td>
+                    <td class="lieu"></td>
+                    <td class="prix"></td>
+                    <td class="nbplaces"></td>
+                    <td class="iconeAction"><img src="./img/oeil-bleu.png"></td>
+                    <td class="iconeAction"><img src="./img/crayon.png"></td>
+                    <td class="iconeAction"><img src="./img/supprimer.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="nom"></td>
+                    <td class="date"></td>
+                    <td class="lieu"></td>
+                    <td class="prix"></td>
+                    <td class="nbplaces"></td>
+                    <td class="iconeAction"><img src="./img/oeil-bleu.png"></td>
+                    <td class="iconeAction"><img src="./img/crayon.png"></td>
+                    <td class="iconeAction"><img src="./img/supprimer.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="nom"></td>
+                    <td class="date"></td>
+                    <td class="lieu"></td>
+                    <td class="prix"></td>
+                    <td class="nbplaces"></td>
+                    <td class="iconeAction"><img src="./img/oeil-bleu.png"></td>
+                    <td class="iconeAction"><img src="./img/crayon.png"></td>
+                    <td class="iconeAction"><img src="./img/supprimer.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="nom"></td>
+                    <td class="date"></td>
+                    <td class="lieu"></td>
+                    <td class="prix"></td>
+                    <td class="nbplaces"></td>
+                    <td class="iconeAction"><img src="./img/oeil-bleu.png"></td>
+                    <td class="iconeAction"><img src="./img/crayon.png"></td>
+                    <td class="iconeAction"><img src="./img/supprimer.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="nom"></td>
+                    <td class="date"></td>
+                    <td class="lieu"></td>
+                    <td class="prix"></td>
+                    <td class="nbplaces"></td>
+                    <td class="iconeAction"><img src="./img/oeil-bleu.png"></td>
+                    <td class="iconeAction"><img src="./img/crayon.png"></td>
+                    <td class="iconeAction"><img src="./img/supprimer.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="nom"></td>
+                    <td class="date"></td>
+                    <td class="lieu"></td>
+                    <td class="prix"></td>
+                    <td class="nbplaces"></td>
+                    <td class="iconeAction"><img src="./img/oeil-bleu.png"></td>
+                    <td class="iconeAction"><img src="./img/crayon.png"></td>
+                    <td class="iconeAction"><img src="./img/supprimer.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="nom"></td>
+                    <td class="date"></td>
+                    <td class="lieu"></td>
+                    <td class="prix"></td>
+                    <td class="nbplaces"></td>
+                    <td class="iconeAction"><img src="./img/oeil-bleu.png"></td>
+                    <td class="iconeAction"><img src="./img/crayon.png"></td>
+                    <td class="iconeAction"><img src="./img/supprimer.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="nom"></td>
+                    <td class="date"></td>
+                    <td class="lieu"></td>
+                    <td class="prix"></td>
+                    <td class="nbplaces"></td>
+                    <td class="iconeAction"><img src="./img/oeil-bleu.png"></td>
+                    <td class="iconeAction"><img src="./img/crayon.png"></td>
+                    <td class="iconeAction"><img src="./img/supprimer.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="nom"></td>
+                    <td class="date"></td>
+                    <td class="lieu"></td>
+                    <td class="prix"></td>
+                    <td class="nbplaces"></td>
+                    <td class="iconeAction"><img src="./img/oeil-bleu.png"></td>
+                    <td class="iconeAction"><img src="./img/crayon.png"></td>
+                    <td class="iconeAction"><img src="./img/supprimer.png"></td>
+                  </tr>
+
+                </table>
+              </div>
+
+              <div id="numeroPages">
+                <a href="#"><p><<</p></a>
+                <a href="listeav.html" id="page1"><p>1</p></a>
+                <a href="#"><p>2</p></a>
+                <a href="#"><p>3</p></a>
+                <a href="#"><p>>></p></a>
+              </div>
+
+            </div>
+          </div>
+
+  <!--------------------------- CONTENU - COLONNE DROITE -------------------------->
+
+          <div id="colonneDroite">
+
+    <!-- ********************* 1 - BANNIERE AJOUTER AVENTURE ********************* --> 
+          
+            <div id="banniere">
+              <a href="ajoutav.html">
+                <img src="./img/bouton-ajout-aventure.png">
+              </a>
+            </div>
+
+
+      <!-- ********************* 2 - TOP RESERVATIONS ********************* --> 
+
+            <div id="topAventures">
+              <h2 id="titleTopAv">Top des<Br>aventures</h2>
+              
+              <div>
+                <table id="tableTopAventures">
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+
+          </div>      
+        </div>        
+  
+      </section>
+    </container>
+
+
+<!--------------------------- SCRIPTS JS -------------------------->
+
+<script src="./js/ajax.liste.av.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="./js/jquery.simpleAccordion.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.myNav').simpleAccordion();
+	});
+</script>
+
+
+  </body>
+
+</html>

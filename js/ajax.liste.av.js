@@ -1,4 +1,4 @@
-/* ******************* RECUPERATION & AFFICHAGE BASE DE DONNEES DANS DASHBOARD ******************* */
+/* ******************* RECUPERATION & AFFICHAGE BASE DE DONNEES POUR PAGE LISTE DES AVENTURES ******************* */
 
 const url = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=An2aDx3J6TyOYREptmGLvsEmz08OUwR1";
 
@@ -10,40 +10,6 @@ const url = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=U
         let data = await response.json();
         var tableauAventure = data._embedded.events;
         console.log(data);
-
-
-// //////////////// AFFICHER LES CHIFFRES DANS ENCADRES FOCUS CHIFFRES ////////////////
-
-    // 1- Total du chiffre d'affaires
-        let totalCA = 0;
-        for (i=0 ; i < tableauAventure.length ; i++) {
-            if (tableauAventure[i].priceRanges !== undefined) { // Attention, pas de priceRanges pour tous
-                totalCA += tableauAventure[i].priceRanges[0].max;
-            }
-        }
-        document.getElementById("texteChiffresCA").innerHTML = Math.round(totalCA);   // Afficher chiffre d'affaires
-
-
-    // 2- Nombre d'aventures
-        let nbAv = 0;
-            for (i=0 ; i < tableauAventure.length ; i++) {
-                nbAv += tableauAventure[i]._embedded.venues[0].upcomingEvents._total;
-            }
-        document.getElementById("texteChiffresAv").innerHTML = Math.round(nbAv);   // Afficher nombre d'aventures
-    
-
-    // 3- Nombre de CoAventuriers
-        let nbCoAv = 0;
-        for (i=0 ; i < tableauAventure.length ; i++) {
-            if (tableauAventure[i].priceRanges !== undefined) { // Attention, pas de priceRanges pour tous
-                nbCoAv += tableauAventure[i].priceRanges[0].min;
-            }
-        }
-        document.getElementById("texteChiffresCoAv").innerHTML = Math.round(nbCoAv);   // Afficher chiffre d'affaires
-    
-
-    // 4- Nombre de professionnels
-        document.getElementById("texteChiffresPro").innerHTML = tableauAventure.length;   // Afficher nombre de professionnels
 
 
 // //////////////// AFFICHER LES DONNEES DANS LE TABLEAU DES TOP AVENTURES ////////////////
@@ -76,17 +42,9 @@ const url = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=U
 
 // //////////////// AFFICHER LES DONNEES DANS LE TABLEAU DES PROCHAINES AVENTURES A COMPLETER ////////////////
 
-    // Trier par date décroissante
-        function SortTime(a,b){ 
-            da=new Date(a.dates.start.localDate);
-            db=new Date(b.dates.start.localDate);
-            return (da>db)?1:-1;
-        }
-        tableauAventure.sort(SortTime);
-
     // Afficher les données en HTML
         function afficherAventure() {
-            for (let i=0 ; i < 6 ; i++) {
+            for (let i=0 ; i < 9 ; i++) {
                 document.querySelectorAll(".nom")[i].innerHTML = tableauAventure[i].name;   //Affichage noms des aventures
                 document.querySelectorAll(".date")[i].innerHTML = tableauAventure[i].dates.start.localDate;     // Affichage dates des aventures
                 document.querySelectorAll(".lieu")[i].innerHTML = tableauAventure[i]._embedded.venues[0].city.name;   //Affichage lieux des aventures
