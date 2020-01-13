@@ -27,6 +27,7 @@ body {
 
 container {
     display: flex;
+    width: 100vw;
 }
 
 h2 {
@@ -68,7 +69,6 @@ header img {
 /* /////////////////////////////// MENU BARRE LATERALE /////////////////////////////// */
 
 nav {
-    height: 90vh;
     width: 20vw;
     background-color: rgba(0,0,0,0.7);
     color: white;
@@ -344,7 +344,7 @@ thead {
 /* ///////////////////// PAGE : AJOUTER UNE AVENTURE ///////////////////// */
 
 /* FORMULAIRE */
-
+.contenu
 form {
-    width: 92%;
+    width: 72%;
 }
