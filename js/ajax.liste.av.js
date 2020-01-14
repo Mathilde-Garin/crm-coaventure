@@ -60,6 +60,7 @@ const url = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=U
             }
         }
     afficherAventure();
-    }
 
+// FIN FONCTION ASYNC
+    }
     recupererData();

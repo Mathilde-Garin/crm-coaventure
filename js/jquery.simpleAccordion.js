@@ -15,9 +15,10 @@
           trigger: '.ui-accordion-trigger', // Item's trigger
           content: '.ui-accordion-content', // Content to show/hide
           active: 'active', // Active class (= opened item)
-          autoclose: false, // Close opened items when clicking anywhere on docment (but on the accordion)
+          autoclose: false, // Close opened items when clicking anywhere on document (but on the accordion)
           multiple: false, // Allow multiple items opened at once
           speed: 300, // Open/close duration
+          collapsible: true,
           debug: false
        }, options);
  

@@ -28,6 +28,7 @@ body {
 container {
     display: flex;
     width: 100vw;
+    height: 90vh;
 }
 
 h2 {
@@ -133,6 +134,7 @@ li img {
     top: 45%;
     left: 90%;
 }
+
 
 /* ////////////////////////////////// CONTENU - PARTIE DROITE ////////////////////////////////// */
 
@@ -295,6 +297,7 @@ thead {
     margin-right: 3vw;
     background-color: white;
     border-radius: 5px;
+    width: 54vw;
 }
 
 #titleTopAv {
@@ -343,8 +346,137 @@ thead {
 
 /* ///////////////////// PAGE : AJOUTER UNE AVENTURE ///////////////////// */
 
-/* FORMULAIRE */
-.contenu
-form {
-    width: 72%;
+#contenuAjoutAv {
+    display: flex;
 }
+
+
+/* FORMULAIRE */
+
+#formulaire {
+    margin-left: 1vw;
+    margin-right: 2vw;
+}
+
+input, select, textarea {
+    margin-bottom: 2vh;
+    font-family: 'Vision';
+    font-size: 1em;
+    color: grey;
+    width: 49%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#titreAv, #adresse, textarea {
+    width: 99%;
+}
+
+[type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+#dateofbirth {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 48%;
+}
+
+.buttonRadio, #buttonPhoto {
+    display: flex;
+    flex-direction: row;
+}
+
+#radio, #radio label {
+    width: 2vw;
+    margin-bottom: 0;
+}
+
+.textButton {
+    margin-top: 0;
+}
+
+button {
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Vision';
+    font-size: 0.8em;
+}
+
+#buttonSaveForm {
+    width: 12vw;
+    height: auto;
+    float: right;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    cursor: pointer;
+}
+
+#buttonSaveForm:hover {
+    content: url(./img/bouton-enregistrer-orange-survol.png);
+}
+
+#textButtonPhoto {
+    margin-top: 10px;
+}
+
+
+  /* BOUTON UPLOAD IMAGE */
+
+  .input-file-container {
+    position: relative;
+  } 
+
+  .js .input-file-trigger {
+    padding: 20px 70px 0px 70px;
+    background: url(./img/bouton-telecharger-gris.png) no-repeat;
+    background-size: contain;
+    transition: all .4s;
+    height: 1vh;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    cursor: pointer;
+  }
+
+  .js .input-file {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .js .input-file:hover + .input-file-trigger,
+  .js .input-file:focus + .input-file-trigger,
+  .js .input-file-trigger:hover,
+  .js .input-file-trigger:focus {
+    background: url(./img/bouton-telecharger-gris-survol.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  
+  .file-return {
+    margin: 0;
+  }
+
+  .file-return:not(:empty) {
+    margin: 1em 0;
+  }
+
+  .js .file-return {
+    font-size: .8em;
+    margin-left: 30px;
+  }
+
+  .js .file-return:not(:empty):before {
+    content: "Fichier séléctionné :";
+  }
+
+  
