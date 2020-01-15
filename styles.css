@@ -28,7 +28,7 @@ body {
 container {
     display: flex;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
 }
 
 h2 {
@@ -71,6 +71,7 @@ header img {
 
 nav {
     width: 20vw;
+    height: auto;
     background-color: rgba(0,0,0,0.7);
     color: white;
     list-style: none;
@@ -82,20 +83,18 @@ ul {
     padding-inline-start: 0px;
 }
 
-li {
-    padding-left: 1vw;
-}
-
 li a {
     display:block;
     text-decoration: none;
     color: white;
     position: relative;
+    padding-left: 1vw;
   }
 
 .navActive:hover,
 .title-nav1:hover,
-.myNav-item a:hover {
+.myNav-item a:hover,
+#pageActive {
     background-color: rgba(0,0,0,0.4);
     font-weight: bold;
 }
@@ -103,6 +102,10 @@ li a {
 .title-nav, .title-nav1 {
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.title-nav {
+    padding-left: 1vw;
 }
 
 li img {
@@ -127,6 +130,10 @@ li img {
     display:block; 
 }
 
+#sousMenu {
+    padding-left: 2vw;
+}
+
 .flecheBas {
     width: 10px;
     height: 5px;
@@ -141,6 +148,7 @@ li img {
 section {
     background-color: rgba(215,214,214,0.35);
     width: 80vw;
+    height: auto;
 }
 
     /* ********************* 1 - FOCUS CHIFFRES ********************* */
@@ -176,7 +184,7 @@ section {
 }
 
 
-    /* ********************* 2 - PROCHAINES AVENTURES ********************* */
+    /* ********************* 2 - TABLEAU PROCHAINES AVENTURES ********************* */
 
 #tableAventures {
     display: flex;
@@ -201,6 +209,10 @@ section {
     width: 25px;
     height: 25px;
     margin-left: 2vw;
+}
+
+#titleCenter {
+    text-align: center;
 }
 
 /* TABLEAU PROCHAINES AVENTURES */
@@ -304,7 +316,7 @@ thead {
     padding-top: 20px;
 }
 
-.iconeAction img {
+.iconeActionConsulter img, .iconeActionModifier img, .iconeActionSupprimer img {
     width: auto;
     height: 20px;
 }
@@ -397,7 +409,7 @@ input, select, textarea {
 }
 
 #radio, #radio label {
-    width: 2vw;
+    width: 3vw;
     margin-bottom: 0;
 }
 

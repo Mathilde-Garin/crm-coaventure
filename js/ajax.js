@@ -1,3 +1,5 @@
+// FONCTIONS POUR PAGE D'ACCUEIL : DASHBOARD
+
 /* ******************* RECUPERATION & AFFICHAGE BASE DE DONNEES DANS DASHBOARD ******************* */
 
 const url = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=An2aDx3J6TyOYREptmGLvsEmz08OUwR1";

@@ -30,7 +30,7 @@
     <!-- ********************* MENU 1 - GESTION SUIVI ********************* -->
 
         <ul class="myNav">
-          <li class="title-nav1"><a href="index.html">Tableau de bord</a></li>
+          <li class="title-nav1" id="pageActive"><a href="index.html">Tableau de bord</a></li>
           <li class="title-nav">Gestion de suivi</li>
           <li class="navActive">
             <a href="#"><img src="./img/icone-ca.png">Chiffre d'affaires</a>
@@ -43,8 +43,8 @@
               <img class="flecheBas" src="./img/fleche-bas-blanc.png">
             </a>
             <ul class="myNav-content ui-accordion-content">
-              <li class="navActive"><a href="listeav.html"><img src="./img/icone-liste.png">Liste des aventures</a></li>
-              <li class="navActive"><a href="ajoutav.html"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+              <li><a href="listeav.html" class="navActive" id="sousMenu"><img src="./img/icone-liste.png">Liste des aventures</a></li>
+              <li><a href="ajoutav.html" class="navActive" id="sousMenu"><img src="./img/icone-ajouter.png">Ajouter</a></li>
             </ul>
           </li>
 
@@ -55,8 +55,8 @@
               <img class="flecheBas" src="./img/fleche-bas-blanc.png">
             </a>
             <ul class="myNav-content ui-accordion-content">
-              <li><a href="#" class="navActive"><img src="./img/icone-liste.png">Liste des CoAventuriers</a></li>
-              <li><a href="#" class="navActive"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+              <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-liste.png">Liste des CoAventuriers</a></li>
+              <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-ajouter.png">Ajouter</a></li>
             </ul>
           </li>
 
@@ -67,8 +67,8 @@
               <img class="flecheBas" src="./img/fleche-bas-blanc.png">
             </a>
             <ul class="myNav-content ui-accordion-content">
-              <li><a href="#" class="navActive"><img src="./img/icone-liste.png">Liste des professionnels</a></li>
-              <li><a href="#" class="navActive"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+              <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-liste.png">Liste des professionnels</a></li>
+              <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-ajouter.png">Ajouter</a></li>
             </ul>
           </li>
         </ul>
@@ -122,7 +122,7 @@
         </div>
 
 
-  <!-- ********************* 2 - PROCHAINES AVENTURES ********************* -->      
+  <!-- ********************* 2 - TABLEAU PROCHAINES AVENTURES ********************* -->      
         <div id=tableAventures>
           <div id="nextAventures">
 
@@ -131,7 +131,7 @@
               <h2>Les prochaines aventures à compléter</h2>
             </div>
 
-            <!-- TABLEAU PROCHAINES AVENTURES -->
+            <!-- TABLEAU -->
             <div>
               <table id="tableNextAventures">
 
@@ -140,7 +140,7 @@
                   <td>Date</td>
                   <td>Lieu</td>
                   <td>Prix</td>
-                  <td>Nb places restantes</td>
+                  <td id="titleCenter">Nb places restantes</td>
                   <td></td>
                 </thead>
 

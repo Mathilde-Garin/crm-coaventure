@@ -1,3 +1,5 @@
+// FONCTIONS POUR PAGE AJOUTER UNE AVENTURE
+
 /* ******************* BOUTON UPLOAD PHOTO DANS FORMULAIRE ******************* */
 
 document.querySelector("html").classList.add('js');

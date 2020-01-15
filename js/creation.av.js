@@ -12,7 +12,7 @@
     }
 
     // INITIALISATION VARIABLE
-    var aventureNew = [{
+    var tableAventureNew = [{
         titreAv: "",
         dateofbirth: "",
         ville: "",
@@ -20,7 +20,19 @@
         nbPlaces: ""
     }];
 
-    // ENREGISTRER DONNEES DU FORMULAIRE DANS UN TABLEAU
+    // CHARGER LES DONNEES
+    function chargerData() {
+        let tableavNew = localStorage.getItem("tableAventureNew");
+        tableAventureNew = JSON.parse(tableavNew);
+    }
+    chargerData();
+
+    // SAUVEGARDER
+    function save () {
+        localStorage.setItem("tableAventureNew", JSON.stringify(tableAventureNew));
+    }
+    
+    // ENREGISTRER DONNEES DU FORMULAIRE DANS UN TABLEAU D'OBJETS
     function saveData() {
         let titreAvValue = document.getElementById('titreAv').value;
 		let dateofbirthValue = document.getElementById('dateofbirth').value;
@@ -28,23 +40,11 @@
         let tarifPersValue = document.getElementById('tarifPers').value;
         let nbPlacesValue = document.getElementById('nbPlaces').value;
 		let nouvelleAv = new NewAventure (titreAvValue, dateofbirthValue, villeValue, tarifPersValue, nbPlacesValue);
-        aventureNew.push(nouvelleAv);
-        // localStorage.setItem("nouvelleAv", JSON.stringify(nouvelleAv));
+        tableAventureNew.push(nouvelleAv);
+        save();
         console.log(nouvelleAv);
+        console.log(tableAventureNew);
     }
 
     document.getElementById("buttonSaveForm").onclick = saveData;
 
-    // AFFICHER DONNEES DU FORMULAIRE (PAGE AJOUTER) DANS LA LISTE DES AVENTURES (PAGE LISTE AV)
-
-    function afficherAventure() {
-        for (let i=0 ; i < 9 ; i++) {
-            document.querySelectorAll(".nom")[i].innerHTML = nouvelleAv[i].titreAv;   //Affichage noms des aventures
-            document.querySelectorAll(".date")[i].innerHTML = nouvelleAv[i].dateofbirth;     // Affichage dates des aventures
-            document.querySelectorAll(".lieu")[i].innerHTML = nouvelleAv[i].ville;   //Affichage lieux des aventures
-            document.querySelectorAll(".nbplaces")[i].innerHTML = nouvelleAv[i].tarifPers;   //Affichage tarif / personne
-            document.querySelectorAll(".nbplaces")[i].innerHTML = nouvelleAv[i].nbPlaces;   //Affichage nombres de places des aventures
-        }
-    }
-
-    afficherAventure();

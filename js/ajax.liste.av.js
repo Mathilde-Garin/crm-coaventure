@@ -1,3 +1,5 @@
+// FONCTIONS POUR PAGE LISTE DES AVENTURES
+
 /* ******************* RECUPERATION & AFFICHAGE BASE DE DONNEES POUR PAGE LISTE DES AVENTURES ******************* */
 
 const url = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=An2aDx3J6TyOYREptmGLvsEmz08OUwR1";
@@ -40,26 +42,26 @@ const url = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=U
     afficherTopAventures();
 
 
-// //////////////// AFFICHER LES DONNEES DANS LE TABLEAU DES PROCHAINES AVENTURES A COMPLETER ////////////////
+// // //////////////// AFFICHER LES DONNEES DANS LE TABLEAU DES PROCHAINES AVENTURES A COMPLETER ////////////////
 
-    // Afficher les données en HTML
-        function afficherAventure() {
-            for (let i=0 ; i < 9 ; i++) {
-                document.querySelectorAll(".nom")[i].innerHTML = tableauAventure[i].name;   //Affichage noms des aventures
-                document.querySelectorAll(".date")[i].innerHTML = tableauAventure[i].dates.start.localDate;     // Affichage dates des aventures
-                document.querySelectorAll(".lieu")[i].innerHTML = tableauAventure[i]._embedded.venues[0].city.name;   //Affichage lieux des aventures
-                document.querySelectorAll(".nbplaces")[i].innerHTML = tableauAventure[i]._embedded.venues[0].upcomingEvents._total;   //Affichage nombres de places des aventures
+//     // Afficher les données en HTML
+//         function afficherAventure() {
+//             for (let i=0 ; i < 9 ; i++) {
+//                 document.querySelectorAll(".nom")[i].innerHTML = tableauAventure[i].name;   //Affichage noms des aventures
+//                 document.querySelectorAll(".date")[i].innerHTML = tableauAventure[i].dates.start.localDate;     // Affichage dates des aventures
+//                 document.querySelectorAll(".lieu")[i].innerHTML = tableauAventure[i]._embedded.venues[0].city.name;   //Affichage lieux des aventures
+//                 document.querySelectorAll(".nbplaces")[i].innerHTML = tableauAventure[i]._embedded.venues[0].upcomingEvents._total;   //Affichage nombres de places des aventures
 
-                // Fonction spécifique pour le prix
-                if (tableauAventure[i].priceRanges === undefined) { // Attention, pas de priceRanges pour tous
-                    document.querySelectorAll(".prix")[i].innerHTML = "Gratuit";   //Affichage "gratuit" si pas de prix dans BDD
+//                 // Fonction spécifique pour le prix
+//                 if (tableauAventure[i].priceRanges === undefined) { // Attention, pas de priceRanges pour tous
+//                     document.querySelectorAll(".prix")[i].innerHTML = "Gratuit";   //Affichage "gratuit" si pas de prix dans BDD
                     
-                } else {
-                    document.querySelectorAll(".prix")[i].innerHTML = tableauAventure[i].priceRanges[0].min;   //Affichage prix des aventures
-                }
-            }
-        }
-    afficherAventure();
+//                 } else {
+//                     document.querySelectorAll(".prix")[i].innerHTML = tableauAventure[i].priceRanges[0].min;   //Affichage prix des aventures
+//                 }
+//             }
+//         }
+//     afficherAventure();
 
 // FIN FONCTION ASYNC
     }

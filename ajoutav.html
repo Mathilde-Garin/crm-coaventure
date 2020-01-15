@@ -35,15 +35,15 @@
         <a href="#"><img src="./img/icone-ca.png">Chiffre d'affaires</a>
       </li>
       
-      <li class="myNav-item ui-accordion-item">
+      <li class="myNav-item ui-accordion-item active">
         <a class="myNav-link ui-accordion-trigger" href="#">
           <img src="./img/icone-aventure-blanc.png">
           Aventures
           <img class="flecheBas" src="./img/fleche-bas-blanc.png">
         </a>
         <ul class="myNav-content ui-accordion-content">
-          <li class="navActive"><a href="listeav.html"><img src="./img/icone-liste.png">Liste des aventures</a></li>
-          <li class="navActive"><a href="ajoutav.html"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+          <li><a href="listeav.html" class="navActive" id="sousMenu"><img src="./img/icone-liste.png">Liste des aventures</a></li>
+          <li id="pageActive"><a href="ajoutav.html" class="navActive" id="sousMenu"><img src="./img/icone-ajouter.png">Ajouter</a></li>
         </ul>
       </li>
 
@@ -54,8 +54,8 @@
           <img class="flecheBas" src="./img/fleche-bas-blanc.png">
         </a>
         <ul class="myNav-content ui-accordion-content">
-          <li><a href="#" class="navActive"><img src="./img/icone-liste.png">Liste des CoAventuriers</a></li>
-          <li><a href="#" class="navActive"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+          <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-liste.png">Liste des CoAventuriers</a></li>
+          <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-ajouter.png">Ajouter</a></li>
         </ul>
       </li>
 
@@ -66,8 +66,8 @@
           <img class="flecheBas" src="./img/fleche-bas-blanc.png">
         </a>
         <ul class="myNav-content ui-accordion-content">
-          <li><a href="#" class="navActive"><img src="./img/icone-liste.png">Liste des professionnels</a></li>
-          <li><a href="#" class="navActive"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+          <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-liste.png">Liste des professionnels</a></li>
+          <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-ajouter.png">Ajouter</a></li>
         </ul>
       </li>
     </ul>
@@ -127,7 +127,7 @@
                   <input id="tarifPers" type="texte" name="titre" placeholder="Tarif / personne">
                   <input id="hdebut" type="texte" name="titre" placeholder="Heure début">
                   <input id="hfin" type="texte" name="titre" placeholder="Heure fin">
-                  <input id="nbPlaces" type="texte" name="titre" placeholder="Nb de places disponibles">
+                  <input id="nbPlaces" type="texte" name="titre" placeholder="Nombre de places disponibles">
                   
                   <!-- Liste déroulante Difficulté -->
                   <select  id="difficulte" name="difficulte">
