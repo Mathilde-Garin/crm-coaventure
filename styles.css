@@ -28,6 +28,7 @@ body {
 container {
     display: flex;
     width: 100vw;
+    height: -webkit-fill-available;
 }
 
 h2 {
@@ -140,6 +141,34 @@ li img {
     top: 45%;
     left: 90%;
 }
+
+/* ------- MENU ACCORDEON : FLECHES ------- */
+
+.myNav-item {
+    position:relative; /* Référence aux absolutes */
+ }
+ .myNav-item:before { /* Flèche */
+    content:'';
+    position:absolute; top:17px; right:10px;
+    width:0; height:0;
+    border-style:solid; border-color:transparent;
+    border-width:5px; /* Taille de la flèche */
+    pointer-events:none; /* Clique neutralisé */
+ }
+ .myNav-item:not(.active):before { /* Flèche down */
+    border-bottom-width:0;
+    border-top-color:#fff;
+    margin-right: 1vw;
+ }
+ .myNav-item.active:before { /* Flèche up */
+    border-top-width:0;
+    border-bottom-color:#fff;
+    margin-right: 1vw;
+ }
+ .myNav-item.active,
+ .myNav-item:hover {
+    background:#404040; /* État actif et rollover */
+ }
 
 
 /* ////////////////////////////////// CONTENU - PARTIE DROITE ////////////////////////////////// */
@@ -261,6 +290,12 @@ thead {
     width: auto;
 }
 
+.buttonConsulter img:hover {
+    content: url("./img/bouton-consulter-bleu-survol.png");
+    height: 4vh;
+    width: auto;
+}
+
 .buttonConsulterOeil img {
     height: 2vh;
     width: auto;
@@ -374,7 +409,7 @@ input, select, textarea {
     font-family: 'Vision';
     font-size: 1em;
     color: grey;
-    width: 49%;
+    width: 25vw;
     padding-top: 5px;
     padding-bottom: 5px;
 }

@@ -11,6 +11,7 @@
         }
     }
 
+
     // INITIALISATION VARIABLE
     var tableAventureNew = [{
         titreAv: "",
@@ -27,11 +28,13 @@
     }
     chargerData();
 
+
     // SAUVEGARDER
     function save () {
         localStorage.setItem("tableAventureNew", JSON.stringify(tableAventureNew));
     }
     
+
     // ENREGISTRER DONNEES DU FORMULAIRE DANS UN TABLEAU D'OBJETS
     function saveData() {
         let titreAvValue = document.getElementById('titreAv').value;
@@ -42,8 +45,8 @@
 		let nouvelleAv = new NewAventure (titreAvValue, dateofbirthValue, villeValue, tarifPersValue, nbPlacesValue);
         tableAventureNew.push(nouvelleAv);
         save();
-        console.log(nouvelleAv);
-        console.log(tableAventureNew);
+            console.log(nouvelleAv);
+            console.log(tableAventureNew);
     }
 
     document.getElementById("buttonSaveForm").onclick = saveData;
