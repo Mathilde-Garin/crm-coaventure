@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CRM CoAventure - Ajouter aventure</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="img/favicon.ico">
+    
+  </head>
+
+  <body>    
+
+<!----------------------------- HEADER ---------------------------->
+    <header>
+        <a href="index.html"><img src="./img/logo-coaventure-horizontal-transparent.png"></a>
+        <div id="connexion">
+          <p>Admin</p>
+          <img id="imgDeconnexion" src="./img/logout.png">
+        </div>
+    </header>
+
+<!----------------------- MENU BARRE LATERALE ---------------------->
+<container>
+  <nav>
+
+<!-- ********************* MENU 1 - GESTION SUIVI ********************* -->
+
+    <ul class="myNav">
+      <li class="title-nav1"><a href="index.html">Tableau de bord</a></li>
+      <li class="title-nav">Gestion de suivi</li>
+      <li class="navActive">
+        <a href="#"><img src="./img/icone-ca.png">Chiffre d'affaires</a>
+      </li>
+      
+      <li class="myNav-item ui-accordion-item active">
+        <a class="myNav-link ui-accordion-trigger" href="#">
+          <img src="./img/icone-aventure-blanc.png">
+          Aventures
+        </a>
+        <ul class="myNav-content ui-accordion-content">
+          <li><a href="listeav.html" class="navActive" id="sousMenu"><img src="./img/icone-liste.png">Liste des aventures</a></li>
+          <li id="pageActive"><a href="ajoutav.html" class="navActive" id="sousMenu"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+        </ul>
+      </li>
+
+      <li class="myNav-item ui-accordion-item">
+        <a class="myNav-link ui-accordion-trigger" href="#">
+          <img src="./img/icone-coaventurier.png">
+          CoAventuriers
+        </a>
+        <ul class="myNav-content ui-accordion-content">
+          <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-liste.png">Liste des CoAventuriers</a></li>
+          <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+        </ul>
+      </li>
+
+      <li class="myNav-item ui-accordion-item">
+        <a class="myNav-link ui-accordion-trigger" href="#">
+          <img src="./img/icone-professionnel.png">
+          Professionnels 
+        </a>
+        <ul class="myNav-content ui-accordion-content">
+          <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-liste.png">Liste des professionnels</a></li>
+          <li><a href="#" class="navActive" id="sousMenu"><img src="./img/icone-ajouter.png">Ajouter</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+<!-- ********************* MENU 2- FIDELISATION ********************* -->
+
+    <ul>
+      <li class="title-nav">Fidélisation</li>
+      <li class="navActive">
+        <a href="#"><img src="./img/icone-badge.png">Badges</a>
+      </li>
+      <li class="navActive">
+        <a href="#"><img src="./img/icone-ajouter.png">Ajouter un badge</a>
+      </li>
+    </ul>
+
+<!-- ********************* MENU 3- ANALYTICS ********************* -->
+
+<ul>
+  <li class="title-nav1"> <a href="#">Analytics</a></li>
+</ul>
+    
+  </nav>
+
+
+
+<!--------------------------- CONTENU - COLONNE CENTRE -------------------------->
+      <section>
+        <div id="contenuAjoutAv">
+          <div id=tableAventures>
+            <div id="listeAventures">
+
+              <div id="titleNextAventures">
+                <h2>Ajouter une aventure</h2>
+              </div>
+
+              <!-- FORMULAIRE -->
+              <div id="formulaire">
+                  <input id="titreAv" type="texte" name="titre" placeholder="Titre de l'aventure">
+                  
+                  <!-- Liste déroulante Catégorie -->
+                  <select  id="categorie" name="categorie">
+                    <option value="">Catégorie</option>
+                    <option value="culture">Arts & Culture</option>
+                    <option value="cuisine">Ateliers cuisine</option>
+                    <option value="nature">Nature</option>
+                    <option value="sport">Sport</option>
+                  </select>
+
+                  <!-- Datepicker -->
+                  <input type="date" name="dateofbirth" id="dateofbirth">
+
+                  <!-- Input -->              
+                  <input id="adresse" type="texte" name="titre" placeholder="Adresse">
+                  <input id="ville" type="texte" name="titre" placeholder="Ville">
+                  <input id="tarifPers" type="texte" name="titre" placeholder="Tarif / personne">
+                  <input id="hdebut" type="texte" name="titre" placeholder="Heure début">
+                  <input id="hfin" type="texte" name="titre" placeholder="Heure fin">
+                  <input id="nbPlaces" type="number" name="titre" placeholder="Nombre de places disponibles">
+                  
+                  <!-- Liste déroulante Difficulté -->
+                  <select  id="difficulte" name="difficulte">
+                    <option value="">Difficulté</option>
+                    <option value="culture">Débutant</option>
+                    <option value="cuisine">Intermédiaire</option>
+                    <option value="nature">Confirmé</option>
+                  </select>
+
+                  <!-- Boutons radio -->
+                  <div class="buttonRadio">
+                    <p class="textButton">Petits aventuriers bienvenus :</p>
+                    <input type="radio" name="radio1" id="radio"> <label for="radio">oui</label>
+                    <input type="radio" name="radio1" id="radio"> <label for="radio">non</label>
+                  </div>
+
+                  <div class="buttonRadio">
+                    <p class="textButton">Aventuriers à 4 pattes acceptés :</p>
+                    <input type="radio" name="radio2" id="radio"> <label for="radio">oui</label>
+                    <input type="radio" name="radio2" id="radio"> <label for="radio">non</label>
+                  </div>
+
+                  <!-- Textarea Description -->
+                  <textarea name="textarea" placeholder="Description de l'aventure"
+                  rows="5" cols="30" minlength="10" maxlength="30" ></textarea>
+
+                  <!-- Bouton ajouter photo -->
+                  <div id="buttonPhoto">
+                    <p id="textButtonPhoto">Ajouter une photo :</p>
+                    <form action="#">
+                      <div class="input-file-container">  
+                        <input class="input-file" id="my-file" type="file"><Br>
+                        <label tabindex="0" for="my-file" class="input-file-trigger"></label>
+                      </div>
+                      <p class="file-return"></p>
+                    </form>
+                  </div>
+
+                  <!-- Bouton soumettre formulaire -->
+                  <img id="buttonSaveForm" src="./img/bouton-enregistrer-orange.png">
+                  
+              </div>
+
+            </div>
+          </div>
+        
+  <!--------------------------- CONTENU - COLONNE DROITE -------------------------->
+
+          <div id="colonneDroite">
+
+    <!-- ********************* 1 - BANNIERE AJOUTER AVENTURE ********************* --> 
+          
+            <div id="banniere">
+                <a href="listeav.html">
+                    <img src="./img/bouton-liste-aventure.png">
+                </a>
+            </div>
+
+
+      <!-- ********************* 2 - TOP RESERVATIONS ********************* --> 
+
+            <div id="topAventures">
+              <h2 id="titleTopAv">Top des<Br>aventures</h2>
+              
+              <div>
+                <table id="tableTopAventures">
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="topAventure"></td>
+                    <td class="buttonConsulterOeil"><img src="./img/oeil-bleu.png"></td>
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+
+          </div>      
+        </div>        
+      </div>
+      </section>
+    </container>
+
+
+<!--------------------------- SCRIPTS JS -------------------------->
+
+<script src="./js/ajax.ajout.av.js"></script>
+<script src="./js/creation.av.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="./js/jquery.simpleAccordion.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.myNav').simpleAccordion();
+	});
+</script>
+
+
+  </body>
+
+</html>

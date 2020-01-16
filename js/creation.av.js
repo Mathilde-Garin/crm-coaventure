@@ -21,6 +21,28 @@
         nbPlaces: ""
     }];
 
+
+    // SAUVEGARDER
+    function save() {
+        localStorage.setItem("tableAventureNew", JSON.stringify(tableAventureNew));
+    }
+
+
+    // AFFICHER UNE 1ère AVENTURE DE BASE DANS LA LISTE DES AVENTURES
+    function ajoutAvInital() {
+        let avInitial = new NewAventure (
+            "Atelier aligot avec un grand chef",
+            "2020-02-01",
+            "Montpellier",
+            "59 €",
+            "10"
+        );   
+        tableAventureNew.push(avInitial);
+        save();
+    }
+    ajoutAvInital();
+    
+
     // CHARGER LES DONNEES
     function chargerData() {
         let tableavNew = localStorage.getItem("tableAventureNew");
@@ -28,13 +50,7 @@
     }
     chargerData();
 
-
-    // SAUVEGARDER
-    function save () {
-        localStorage.setItem("tableAventureNew", JSON.stringify(tableAventureNew));
-    }
     
-
     // ENREGISTRER DONNEES DU FORMULAIRE DANS UN TABLEAU D'OBJETS
     function saveData() {
         let titreAvValue = document.getElementById('titreAv').value;
